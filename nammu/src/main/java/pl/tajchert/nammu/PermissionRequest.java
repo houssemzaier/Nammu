@@ -38,13 +38,8 @@ public class PermissionRequest {
     }
 
     public boolean equals(Object object) {
-        if(object == null) {
-            return false;
-        }
-        if(object instanceof PermissionRequest) {
-            return ((PermissionRequest) object).requestCode == this.requestCode;
-        }
-        return false;
+        return (object instanceof PermissionRequest) 
+                && ((PermissionRequest) object).requestCode == this.requestCode;
     }
 
     @Override
